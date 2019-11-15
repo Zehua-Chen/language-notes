@@ -20,8 +20,8 @@ pub mod std {
 }
 ```
 
-Explictly invoke the drop function of a type.
+This **function** explictly invoke the drop **method** of a type.
 
-`drop` method cannot be called by the user because the compiler also
+The `drop` **method** cannot be called by the user because the compiler also
 invokes this method. The user calling this method would cause a double
 free error.
