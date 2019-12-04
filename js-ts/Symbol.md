@@ -1,11 +1,14 @@
 # Symbol
 
-Symbols are identifiers for properties of an object.
+Symbols are identifiers for properties of an object and can be used to access
+properties in objects using the syntax `obj[symb] = value`
 
 - `symbol` is one of the primitive types
 - The `Symbol` **function** contains static properties for common properties
 - The `Symbol` function is an incomplete constructor and cannot be used with
   `new Symbol`
+- Properties assigned using symbols can be printed in console, but will
+  not show up when hte object is converted to string
 
 ## Global Symbol Registries
 
