@@ -7,8 +7,8 @@ Multiline environment breaks an equation into two parts
   placed on any lines after the first line
 
 ```latex
-\begin{multiline}
+\begin{multline}
   a + b \\
   + c + d
-\end{multiline}
+\end{multline}
 ```
