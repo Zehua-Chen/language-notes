@@ -1,4 +1,4 @@
-# Generators
+# Overview
 
 Functions that have the following declarations would return a generator
 when called. Generators are able to "generate" values over time.
@@ -28,3 +28,13 @@ function* other() {
 ```
 
 - `yield* <generator>` allows you to use a generator() with `yield`
+
+# For - Of Loop
+
+```js
+for (const value of generator()) {
+  /* something */
+}
+```
+
+- Generators also work with for-of loops
