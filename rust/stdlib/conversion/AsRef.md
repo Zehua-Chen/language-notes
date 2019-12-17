@@ -15,9 +15,9 @@ Provides a way to convert conforming types to a certain reference type.
 - Take `foo` function above for example, both a value type and a reference type
   can be passed a parameter
 
-     ```rust
-     let var = /* */;
+  ```rust
+  let var = /* */;
 
-     foo(var); // OK
-     foo(&var); // Still OK
-     ```
+  foo(var); // OK
+  foo(&var); // Still OK
+  ```

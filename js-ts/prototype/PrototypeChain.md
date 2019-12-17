@@ -7,5 +7,5 @@
   prototypes, by definition), ending the prototype chain
 - When a property is looked up in an object, if the object does not contain the
   property, the prototype object would be queried
-     - To determine if an object has a property in itself, rather than the
-       prototype, use `Object.hasOwnProperty` function
+  - To determine if an object has a property in itself, rather than the
+    prototype, use `Object.hasOwnProperty` function

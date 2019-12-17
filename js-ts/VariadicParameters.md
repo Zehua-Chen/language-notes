@@ -13,9 +13,7 @@ function foo(...params: any[]) {}
 function other(...params: any[]) {}
 
 function foo(...params: any[]) {
-                                                                                other(
-                                                                                                                                                                ...params
-                                                                                );
+  other(...params);
 }
 
 foo(1, 2, 3);

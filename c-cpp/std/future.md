@@ -5,7 +5,7 @@ class future<T>;
 
 - A `future<T>` object representas a signle task
 - A task can only have a single `future<T>` object
-     - `future<T>` is move-only
+  - `future<T>` is move-only
 - A task can be created using `std::async(...)`
 
 ```cpp
@@ -14,7 +14,7 @@ class shared_future<T>;
 ```
 
 - A `shared_future<T>` is the same as a `future<T>` except it can be copied
-     - Can be waited on across multiple threads
+  - Can be waited on across multiple threads
 
 # Wait
 

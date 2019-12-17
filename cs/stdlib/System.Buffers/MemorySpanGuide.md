@@ -9,7 +9,7 @@
 - Ownership: the owner of a piece of memory is reponsible for managing its
   lfietime, including destroying the memory
 - Consumption: who either reads or writes to the memory
-     - One consumer at a time unless there is a synchronization method
+  - One consumer at a time unless there is a synchronization method
 - Lease: during of access
 
 ## Memory Pools

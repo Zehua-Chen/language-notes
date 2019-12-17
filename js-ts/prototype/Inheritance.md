@@ -6,10 +6,7 @@ To implement inheritance,
 function Parent(param) {}
 
 function Child(param) {
-                                                                                Parent.call(
-                                                                                                                                                                this,
-                                                                                                                                                                param
-                                                                                ); // equivalent of super(...) in some languages
+  Parent.call(this, param); // equivalent of super(...) in some languages
 }
 
 Child.prototype = Object.create(Parent.prototype);
