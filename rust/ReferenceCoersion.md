@@ -1,9 +1,9 @@
 # Reference Coersion
 
-Given a reference to a type `A`, and a parameter that is a reference
-to a type `B`, rust would automatically convert the reference of
-type `A` to a reference of type `B` if `A`'s implementation of
-`trait Deref` can convert a reference of `A` to that of `B`
+Given a reference to a type `A`, and a parameter that is a reference to a type
+`B`, rust would automatically convert the reference of type `A` to a reference
+of type `B` if `A`'s implementation of `trait Deref` can convert a reference of
+`A` to that of `B`
 
 Mutable references can be converted to
 
@@ -30,6 +30,5 @@ fn main() {
 }
 ```
 
-Here, `struct Box<T>` implements `Deref` that can convert
-to references of `i32`. Therefore, `&value` can be convert to
-a reference to `i32`
+Here, `struct Box<T>` implements `Deref` that can convert to references of
+`i32`. Therefore, `&value` can be convert to a reference to `i32`

@@ -1,7 +1,7 @@
 # Destructuring
 
-Closure's parameters may be references, to dereference the reference
-parameters, prefix the parameter usign `&`
+Closure's parameters may be references, to dereference the reference parameters,
+prefix the parameter usign `&`
 
 ```rust
 

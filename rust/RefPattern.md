@@ -5,8 +5,8 @@ When pattern matching or destructuring,
 - `ref`
 - `ref mut`
 
-key words/phrases can be used to take reference of the matched or
-extracted values
+key words/phrases can be used to take reference of the matched or extracted
+values
 
 ## Example
 

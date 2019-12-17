@@ -11,8 +11,8 @@ class Program
 }
 ```
 
-Program with async main function would not terminate upon the first
-async call site, like what would happen in a non-async main function
+Program with async main function would not terminate upon the first async call
+site, like what would happen in a non-async main function
 
 When the above program is executed, the following would be printed
 

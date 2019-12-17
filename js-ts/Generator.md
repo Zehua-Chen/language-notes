@@ -1,12 +1,12 @@
 # Overview
 
-Functions that have the following declarations would return a generator
-when called. Generators are able to "generate" values over time.
+Functions that have the following declarations would return a generator when
+called. Generators are able to "generate" values over time.
 
 ```ts
 function* values() {
-  yield 12;
-  yield 17;
+                                                                                yield 12;
+                                                                                yield 17;
 }
 
 let generator = values();
@@ -16,14 +16,14 @@ let valueC = generator.next(); // { value: undefined, done: true }
 ```
 
 - Generators return objects that has two properties, `value` and `done`
-  - `value` become undefined when all values are exhausted
+     - `value` become undefined when all values are exhausted
 - `generator.return()` would close a generator
-- `generator.throw(e)` throw an error. If generator is at an yield, then
-  the error would be caught by a catch clause in the generator if there is one.
+- `generator.throw(e)` throw an error. If generator is at an yield, then the
+  error would be caught by a catch clause in the generator if there is one.
 
 ```ts
 function* other() {
-  yield* values();
+                                                                                yield* values();
 }
 ```
 
@@ -33,7 +33,7 @@ function* other() {
 
 ```js
 for (const value of generator()) {
-  /* something */
+                                                                                /* something */
 }
 ```
 
