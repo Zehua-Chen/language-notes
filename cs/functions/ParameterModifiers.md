@@ -34,8 +34,15 @@ namespace Foo
   - Argument do not have to be initialized
   - The function must initialize the argument
 - `in`
-  - The argument do not need special markings
+  - The argument do not need special markings by default
+    - When there are other overloads that are passing by values, the passing by
+      value ones would be used; **mark argument with `in` to explicitly use the
+      pass by reference instance**
   - The argument must be initialized before passing
-  - For value types, the function cannot mutate the argument
-  - For reference types, the function can mutate the object, but not the
+  - **For value types**
+    - The function cannot mutate the parameter's fields
+    - The function can still create defensive copies if the parameter's methods
+      (including properties) are called; to avoid this behavior, declare the
+      value types as `readonly struct`
+  - **For reference types**, the function can mutate the object, but not the
     reference
