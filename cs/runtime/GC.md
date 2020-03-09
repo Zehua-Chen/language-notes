@@ -43,3 +43,9 @@ This design is based on the following principals
 Objects that encapsulate unmanaged resources should implement `IDisposable`
 interface. Call `IDisposable.Dispose()` method to release their unmanaged
 resources to avoid memory leaks.
+
+# Applies to
+
+- .Net
+- Mono supports multiple GCs, `SGen` is a generational GC and works similar as
+  described in this document
