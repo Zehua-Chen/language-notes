@@ -1,5 +1,5 @@
 ```cs
-namespace System.Ling {}
+namespace System.Linq {}
 ```
 
 The System.Linq namespace provides classes and interfaces that support queries

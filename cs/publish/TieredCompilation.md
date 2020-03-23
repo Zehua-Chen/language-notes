@@ -13,6 +13,16 @@ When TC is enabled,
 Eventually, the fully optimizing JIT would create code in the background that
 replace the code generated before
 
+## Loops
+
+To enable Quick JIT for loops, add the following to project file
+
+```xml
+<PropertyGroup>
+  <TieredCompilationQuickJitForLoops>false<TieredCompilationQuickJitForLoops>
+</PropertyGroup>
+```
+
 ## Disabling TC
 
 Code created using Quick JIT has worse performance, if this is an issue, disable
@@ -23,6 +33,10 @@ Quick JIT or disable TC completely
   <TieredCompilationQuickJit>false</TieredCompilationQuickJit>
 </PropertyGroup>
 ```
+
+If only Quick JIT is disabled, but TC is still enabled, only pre-compiled code
+participates in TC, if no pre-compiled code is available, the JIT behavior
+is like if TC is completely disabled
 
 ```xml
 <PropertyGroup>
