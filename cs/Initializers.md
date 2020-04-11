@@ -43,9 +43,11 @@ Dictionary<int, string> d = new Dictionary<int, string>
 Collection initializers can be used on types that implement
 
 - `interface IEnumerable`
-- Add methods with the appropriate signatures
+- `Add` methods with the appropriate signatures
   - To use add methods with more than one parameters, use the format:
     `{ params... }`
+  - The types of parameters of `Add` does not need to match the types in the
+    `IEnumerable`
 
 ```cs
 List<string> list = new List<string>
