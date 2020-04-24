@@ -20,3 +20,8 @@ struct Foo
   }
 }
 ```
+
+# Performance
+
+- Trivial properties `public int F { get; set; }` still introduce function calls
+- Use fields instead on hot code paths
