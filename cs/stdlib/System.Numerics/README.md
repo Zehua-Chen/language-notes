@@ -25,6 +25,9 @@ The namespace provides
 - Vector types are pretty printed
 - `Vector.IsHardwareAccelerated` tells if current runtime supports hardware
   acceleration
+- Despite that `Vector<T>` is a reference type, the runtime may not actually
+  allocate heap space for it during optimization
+- `VectorX` types provide vectors that have a fixed size
 
 ## Example
 

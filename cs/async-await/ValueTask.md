@@ -27,3 +27,5 @@ never be done on value tasks
   from a single consumer at a time
 - Use `GetAwaiter().GetResult()` when the operation has not completed: value
   task sources may not implement blocking
+
+Instead, use `AsTask()` method to get a task which supports these operations

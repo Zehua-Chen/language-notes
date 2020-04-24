@@ -1,0 +1,3 @@
+# Format
+
+- `%b`: boolean
