@@ -12,11 +12,26 @@
 
 # Optional Implementations
 
-- A initializer that starts with the label `initialValue`; this takes the
-  initial value that the user uses to initialize the property marked by property
-  wrapper
-  - The initializer can take any number of arguments after this
+- A initializer with the signature resembling `init(wrappedValue:, ...)`:
+
+  - The initializer can take any number of arguments after the first label
+  - If the initializer only takes one parameter, then the enclosing type's
+    synthesized initializer would be as if there is no property wrapper
+
+    ```swift
+    import SwiftUI
+
+    struct Foo: View {
+      // One of State's initializer is init(wrappedValue:)
+      @State
+      var name: String
+    }
+
+    let foo = Foo(name: "")
+    ```
+
   - Must be internal or public
+
 - A property named `projectedValue`; this property is accessed when the user put
   `$` operator before the property marked with the property wrapper Don’t have
   to be of the same type as the wrapped value
