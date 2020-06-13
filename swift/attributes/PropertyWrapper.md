@@ -3,14 +3,43 @@
 - Types that are marked with `@propertyWrapper` become property wrappers
 - To access a property wrapper of a property, add a `_` prefix before the name
   of the property
+- **Property wrappers are stored as properties themselves**, though the wrapped
+  value can be used as if there is no wrapper
 
-# Required Implementations
+  ```swift
+  import Foundation
+
+  @propertyWrapper
+  struct ReadOnly: Encodable {
+    var value: String
+
+    var wrappedValue: String {
+      return self.value
+    }
+  }
+
+  struct Boo: Encodable {
+    @ReadOnly(value: "Foo")
+    var name: String
+  }
+
+  let boo = Boo()
+  let encoder = JSONEncoder()
+
+  let json = String(data: try! encoder.encode(boo), encoding: .utf8) ?? ""
+
+  print(json)
+
+  // {"name":{"value":"Foo"}}
+  ```
+
+## Required Implementations
 
 - A property named `wrappedValue`, which is the property that is actually
   accessed when the user access the property marked by a property wrapper
   - Must be internal or public
 
-# Optional Implementations
+## Optional Implementations
 
 - A initializer with the signature resembling `init(wrappedValue:, ...)`:
 
