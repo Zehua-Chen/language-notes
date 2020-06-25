@@ -8,7 +8,9 @@ This feature is unique to type script
     - Classes cannot be merged with classes and with values; can be mimicked
       using mixins
     - Values cannot be merged with values
-- Uses
+- **Order of declaration**:
+  - Class must be put before namespace that it merge with
+- **Uses**:
   - Augmentation
   - Nested type
   - Enum static methods

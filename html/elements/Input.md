@@ -1,4 +1,18 @@
-# Type
+# Overview
+
+## Focus
+
+When `input` element is in focus, and the user types on the keyboard, the
+element's content would be changed.
+
+# Methods
+
+- `HTMLElement.blur(this)`: remove focus from the element
+- `HTMLElement.focus(this)`: add focus to the element
+
+# Props
+
+## Type
 
 ```html
 <input type="text" />
@@ -9,6 +23,5 @@
 
 # Events
 
-- `onfocus`: when the user clicked on the element and begin to be able to edit
-  its content
-- `onblur`: when the user is no longer editing the element
+- `onfocus`: when the input has just entered focus
+- `onblur`: when the input element is no longer in focus
