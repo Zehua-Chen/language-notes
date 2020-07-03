@@ -1,34 +1,127 @@
-# MSBuild Overview
+# Syntax
 
-Projects starts with a `<Project></Project>` element
+- `$(Constant)`: get the value of a constant
+- `@(Item):`: get the value of an item at the point of execution
+
+# Project
+
+Projects starts with a `<Project Sdk="x"></Project>` element
 
 ```xml
-<Project>
+<Project Sdk="x">
 </Project>
 ```
 
-All build items has to be put inside `<ItemGroup></ItemGroup>` elements;
-build settings are put inside `<PropertyGroup></PropertyGroup>` elements.
+## Disable Defaults from `Microsoft.NET.SDK`
 
-Both of these elements can have conditions that allow them to be conditionally
-enabled.
+### Items
+
+- `EnableDefaultItems`
+- `EnableDefaultCompileItems`
+
+### Assembly Attributes
+
+- `GenerateAssemblyVersionAttribute`
+- `GenerateAssemblyInfo`
+
+# Items
+
+Items are input into the build process
 
 ```xml
-<Project>
+<ItemGroup>
+  <Compile Include="X.cs" />
+  <Content Include="README.txt" />
+  <Reference Include="Assembly.dll" />
+  <PackageReference Include="Package" Version="1.0.0" />
+</ItemGroup>
+```
+
+- Items are put into `<ItemGroup></ItemGroup>`
+- Items can have meta data
+  ```xml
+  <PackageReference Include="Package">
+    <Version>1.0.0</Version>
+  </PackageReference>
+  ```
+- Can have wildcards and exclude items
+  ```
+  <Compile Include="*.cs" Exclude="A.cs" >
+  ```
+
+# Properties
+
+Properties configure the build process
+
+- Properties are put into `<PropertyGroup></PropertyGroup>`
+- Properties can refer to other properties
+  ```xml
+  <AssemblyVersion>$(Version)</AssemblyVersion>
+  ```
+- Properties can have a `Condition` attribute (including property groups)
+  ```xml
+  <DefineConstants Condition="'$(TargetFramework)' = 'netstandard2.0'">
+    FOO
+  </DefineConstants>
+  ```
+
+# Task and Targets
+
+## Tasks
+
+**Task**: a unit of action
+
+- Ex. create directory, copy files, compile
+
+## Targets
+
+```xml
+<Target Name="NPM" BeforeTargets="Prepare">
+  <Exec Command="npm install" />
+  <Exec Command="npm run build" />
+
   <ItemGroup>
-    ...
+    <Content Include="wwwroot/**" Exclude="@(Content);$(DefaultItemExcludes)" />
   </ItemGroup>
-</Project>
+</Target>
 ```
 
-Settings elements can have meta data children
+**Target**: gropu tasks together and express dependencies between operations
+
+- Each target is run only once
+- Tasks are put into targets
+- Targets cannot have cyclic dependencies
+- Targets are run using
+- Targets can still contain items and properties
+  - These items and targets would be used after the target's action is done
+- Ex. clean, build, publish, pack
+
+### Running Targets
+
+- Default targets: `dotnet msbuild` or `msbuild`
+- Restore project and run build: `dotnet build`
+- Specific targets: `msbuild -t:Target` or `msbuild /t:Target`
+
+# Imports
 
 ```xml
-<Project>
-  <ItemGroup>
-    <Foo>
-      <Data />
-    </Foo>
-  </ItemGroup>
-</Project>
+<Import Project="..\..\Shared.props">
+<Import Project="..\..\Shared.targets">
 ```
+
+- MSBuild consider all configuration files as projects
+- **Convention**
+  - Property files are named `X.props`
+    - Include at the top of a build file
+  - Target files are named `X.targets`
+    - Include at the end of a build file
+- Magic file names: files with the following names would be automatically
+  imported
+  - `Directory.Build.props`:
+  - `Directory.Build.targets`
+
+# Log
+
+- Preprocess: `msbuild /pp:out.xml`
+- Log: `msbuild /flp:verbosity=dlg`
+- Binary log `msbuild /bl`
