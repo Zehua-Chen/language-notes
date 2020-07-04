@@ -109,6 +109,13 @@ Properties configure the build process
 <Import Project="..\..\Shared.targets">
 ```
 
+- The imported files still have to start with `<Project></Project>`
+  ```xml
+  <Project>
+    <PropertyGroup>
+    </PropertyGroup>
+  </Project>
+  ```
 - MSBuild consider all configuration files as projects
 - **Convention**
   - Property files are named `X.props`
@@ -117,7 +124,7 @@ Properties configure the build process
     - Include at the end of a build file
 - Magic file names: files with the following names would be automatically
   imported
-  - `Directory.Build.props`:
+  - `Directory.Build.props`
   - `Directory.Build.targets`
 
 # Log
