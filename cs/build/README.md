@@ -132,3 +132,8 @@ Properties configure the build process
 - Preprocess: `msbuild /pp:out.xml`
 - Log: `msbuild /flp:verbosity=dlg`
 - Binary log `msbuild /bl`
+
+# References
+
+- [Common Properties](https://docs.microsoft.com/en-us/visualstudio/msbuild/common-msbuild-project-properties?view=vs-2019)
+- [SDK Style Project](https://docs.microsoft.com/en-us/dotnet/core/project-sdk/overview)
