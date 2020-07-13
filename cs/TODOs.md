@@ -1,22 +1,30 @@
-ValueTask
+# Default
 
+```cs
 void Foo(Boo boo = default)
+```
 
-Local function
+# Local function
+
+```cs
 int Compute() => ...
+```
 
-Overload Disambiguate + Optional parameter
+# Overload Disambiguate + Optional parameter
+
+```cs
 Compute(label: 12)
+```
 
-Generic Constraint
+# Generic Constraint
+
 - Delegate
 - Enum
 - `unmanaged` (pointers)
 
-Tuple, ValueTuple
-(a, b), == !=
+# Ref
 
-Ref
+```cs
 ref int a = ref Foo();
 ref readonly int a = ref Foo();
 
@@ -27,13 +35,21 @@ ref readonly int Foo(int a)
 {
   return ref a;
 }
+```
 
-Span
+# Span
+
 span indexer returns refs
 
-stackalloc
-Span<int> s = stackalloc int[];
+# Stackalloc
 
+```cs
+Span<int> s = stackalloc int[];
+```
+
+# Type Matching
+
+```cs
 swich (a)
 {
   case TypeA aa:
@@ -49,15 +65,24 @@ return a switch
   Type { P: value, PP: var pp } t => value,
   _ => value,
 };
+```
 
-Deconstructor with switch
+# Deconstructor with switch
 
 Type (_ var a, var b) =>
 
+# Range
+
 array[^1] grab last one
+
+# Async
 
 IAsyncEnumerable
 
+# Unsafe
+
 unchecked {}
+
+# ?
 
 ZString
