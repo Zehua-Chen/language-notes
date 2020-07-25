@@ -1,10 +1,10 @@
 ```rust
 pub trait AsRef<T: ?Sized> {
-    fn as_ref(&self) -> &T;
+  fn as_ref(&self) -> &T;
 }
 
 fn foo<Foo: AsRef<i32>>(foo: Foo) {
-    // ...
+  // ...
 }
 ```
 

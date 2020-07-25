@@ -14,19 +14,19 @@ Immutable references can only be converted to immutable references
 
 ```rust
 fn print_number(number: &i32) {
-    println!("number = {}", number);
+  println!("number = {}", number);
 }
 
 fn main() {
-    let mut value = Box::new(12);
+  let mut value = Box::new(12);
 
-    println!("value = {}", value);
-    println!("*value = {}", *value);
+  println!("value = {}", value);
+  println!("*value = {}", *value);
 
-    let value_ref = value.as_mut();
-    *value_ref = 22;
+  let value_ref = value.as_mut();
+  *value_ref = 22;
 
-    print_number(&value);
+  print_number(&value);
 }
 ```
 

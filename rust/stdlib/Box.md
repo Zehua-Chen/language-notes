@@ -14,7 +14,7 @@ Box is a smart pointer type in rust
 
 ```rust
 impl Box<T> {
-    fn new(v: T) -> Box<T>
+  fn new(v: T) -> Box<T>
 }
 ```
 
@@ -22,7 +22,7 @@ Initialize a box to a given value
 
 ```rust
 impl Box<T> {
-    fn new_uninit() -> Box<T>
+  fn new_uninit() -> Box<T>
 }
 ```
 
@@ -32,7 +32,7 @@ Create a box without initializing its memory
 
 ```rust
 impl Box<T> {
-    fn as_mut(&mut self) -> &mut T
+  fn as_mut(&mut self) -> &mut T
 }
 ```
 

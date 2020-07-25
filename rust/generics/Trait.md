@@ -2,8 +2,8 @@
 
 ```rust
 trait Name {
-    fn declare();
-    fn implement() {}
+  fn declare();
+  fn implement() {}
 }
 ```
 

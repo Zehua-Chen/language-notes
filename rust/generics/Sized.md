@@ -1,6 +1,6 @@
 ```rust
 pub trait Sized {
-    // ...
+  // ...
 }
 ```
 

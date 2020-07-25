@@ -9,8 +9,8 @@ iterators**, rather than directly on the collection
 ```rust
 let v = vec!(1, 2, 3);
 let output = v.iter()
-    // map returns an iterator
-    .map(|x| { return x * 2; })
-    // collect converts iterator to collection
-    .collect();
+  // map returns an iterator
+  .map(|x| { return x * 2; })
+  // collect converts iterator to collection
+  .collect();
 ```
