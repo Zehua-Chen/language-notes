@@ -2,7 +2,7 @@
 
 - If `SynchronizationContext.Current` is not null, then after `await`, the rest
   of the function would be run using `context.Post(...)`
-  - Set the current context using
+  - Set the current thread's context using
     `SynchronizationContext.SetSynchronizationContext(context)`
 - If the current context is null, the rest of the function would continue on
   whereever the `await` is run
