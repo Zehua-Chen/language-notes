@@ -14,8 +14,17 @@ trait Name {
 
 # Trait As Return Type
 
-- Functions can return trait type rather than a concrete type
-- Functions can only return one type of implementing type
+```rust
+trait Foo {}
+
+fn get_foo() -> impl Foo {
+  // ...
+}
+```
+
+- Functions can return a type that implements a trait trait rather than a
+  concrete type
+- Functions can only return one type that implements the trait
 
 # Implementing Traits
 
