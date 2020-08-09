@@ -17,9 +17,26 @@ Multithreading requires multiple modules to work together:
 ## Start Run Loop On the Main Thread
 
 ```swift
+import Dispatch
+import CoreFoundation
+
+let queue = DispatchQueue.main
+
+queue.async {
+  print("main")
+}
+
+queue.async {
+  print("main")
+  CFRunLoopStop(CFRunLoopGetCurrent())
+}
+
 // call this method on the main thread
 // GUI applications created with Xcode already does this on the main thread
 CFRunLoopRun()
+
+print("post run")
 ```
 
 - `CFRunLoopRun` gets the main run loop and run it indefinitely
+- `CFRunLoopStop(_)` would stop the current run loop
