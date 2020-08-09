@@ -10,6 +10,8 @@
 
 ## Options
 
+[Profile Options)(https://doc.rust-lang.org/cargo/reference/profiles.html)
+
 - `opt-level`: optimization level
   - `s`: small build size
   - `z`: smallest build size
