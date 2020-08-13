@@ -1,6 +1,6 @@
 # Prototype Chain
 
-- Each object has private prototype property
+- Each object/instance has private prototype property
 - Since the prototype object is also an object, it contains another reference to
   another prototype object, forming a **prototype chain**
 - The last object will have its prototype property set to null (null has no
