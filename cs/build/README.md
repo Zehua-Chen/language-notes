@@ -2,7 +2,8 @@
 
 - `$(Constant)`: get the value of a constant
 - `@(Item):`: get the value of an item at the point of execution
-- `'Value'`: convert `Value` to string
+- `'ABC'`: String with content `ABC`
+- `'$(Constant)'`: convert `Constant` to string
 
 # Project
 
