@@ -2,6 +2,7 @@
 
 - `$(Constant)`: get the value of a constant
 - `@(Item):`: get the value of an item at the point of execution
+- `'Value'`: convert `Value` to string
 
 # Project
 
@@ -86,14 +87,16 @@ Properties configure the build process
 </Target>
 ```
 
-**Target**: gropu tasks together and express dependencies between operations
+**Target**: group tasks together and express dependencies between operations
 
 - Each target is run only once
 - Tasks are put into targets
 - Targets cannot have cyclic dependencies
-- Targets are run using
 - Targets can still contain items and properties
   - These items and targets would be used after the target's action is done
+- Targets can be hooked after other targets
+  - `BeforeTargets`
+  - `AfterTargets`
 - Ex. clean, build, publish, pack
 
 ### Running Targets
