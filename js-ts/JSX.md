@@ -7,6 +7,7 @@ syntax
 
 ```tsx
 /** @jsx expression */
+// @jsx expression
 import { expression } from "xxx";
 
 function Foo() {
