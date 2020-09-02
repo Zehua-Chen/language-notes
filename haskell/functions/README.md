@@ -2,12 +2,12 @@
 
 ```haskell
 foo a = a + 10
-boo a + b = a + b + 10
+boo a b = a + b + 10
 ```
 
 - Haskell functions only take one parameter
-- A convenient syntax exists to make a function appear to take multiple
-  parameters, but in fact generate higher order functions
+- In `boo a b = ...`, `boo` is a function takes `a` parameter a, and returns a
+  function that takes a parameter `b`
 
 ## Types
 

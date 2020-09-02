@@ -10,6 +10,17 @@ nthsq n = 2 * n - 1 + nthsq (n - 1)
 - When `nthsq` takes a parameter with other values, the second definition is
   used
 
+Patterns would be matched in the order they appears, therefore, **if the
+patterns are of the same type, then they should go from detailed to general**
+
+```haskell
+remove (x:xs) = ...
+remove [] = []
+```
+
+Here `[]` and `(x:xs)` are of different types so it dosen't matter the order in
+which they appear
+
 ## Deconstruction
 
 ```haskell
