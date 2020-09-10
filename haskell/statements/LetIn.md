@@ -1,4 +1,4 @@
-# `let {assignments} in {expression}`
+# `let assignments in output`
 
 ```haskell
 foo x =
@@ -11,5 +11,4 @@ main = do
 ```
 
 Define a set of assginments separated by `;` and use the assignments in
-`expressions`. **The `expression` would be the output of the "let in"
-statement**
+`output`. **The `output` would be the output of the "let in" statement**
