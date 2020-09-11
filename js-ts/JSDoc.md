@@ -13,3 +13,5 @@ In VSCode, add `//@ts-check` to the top of a file to enable type checking
  @ @typedef {import("./foo").name} Bar
  */
 ```
+
+Note taht foo must have non type export for this to work

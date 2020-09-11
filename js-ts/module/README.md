@@ -1,6 +1,6 @@
 # Modules
 
-- ES6 module (`import a from "./foo"`)
+- ES2015 module (`import a from "./foo"`)
 - TS module (`module {}`)
 - TS namespace (`namespace {}`)
 

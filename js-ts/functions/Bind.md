@@ -22,9 +22,11 @@ let callback = foo.foo.bind(foo);
 callback();
 ```
 
-`.bind()` returns a special object that when called, already have the `this`
-supplied
+`.bind(this, ...)` returns a special object that when called, **already have the
+`this` or other parameters**
 
 - The function is still stored with the prototype
   - Save memory
 - What's in stored in objects are just a "pointer"
+- **When not dealing with methods, pass undefined or null as the first
+  parameter**
