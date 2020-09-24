@@ -1,5 +1,15 @@
 # Builtin Tasks
 
+## `<Message />`
+
+Print message to std out
+
+```xml
+<Target>
+  <Message Text="Content"></Message>
+</Target>
+```
+
 ## `<ZipDirectory />`
 
 ```xml
