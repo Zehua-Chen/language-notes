@@ -131,9 +131,10 @@ Properties configure the build process
   - `Directory.Build.props`
   - `Directory.Build.targets`
 
-# Log
+# Command Line Options
 
-- Preprocess: `msbuild /pp:out.xml`
+- Preprocess: `msbuild /pp:out.xml`; gives a preprocessed version of msbuild
+  configuration file; with all targets, variables and tasks included
 - Log: `msbuild /flp:verbosity=dlg`
 - Binary log `msbuild /bl`
 

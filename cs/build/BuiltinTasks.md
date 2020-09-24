@@ -10,6 +10,10 @@ Print message to std out
 </Target>
 ```
 
+- `Text`: string to print
+- `Importance`: `high`, `normal`, `low`, `high` would always print
+  - Default to `normal`
+
 ## `<ZipDirectory />`
 
 ```xml
