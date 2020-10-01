@@ -23,3 +23,13 @@ Give the linked list (`[1, 2, 3]`), a new head (`0`)
 ```
 
 Creates a new list by joining two lists
+
+# `$`
+
+```haskell
+$ :: (a -> b) -> a -> b
+foo = (+1) $ 16
+-- gives 17
+```
+
+Apply function on value
