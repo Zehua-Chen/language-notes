@@ -10,11 +10,11 @@ class Monad m where
   fail :: String -> m a
 ```
 
-- `return` takes a a value and put the value inside the container
-- `>>=` (bind): transform a monad containing type `a` to a monad containing type
-  `b`
-- `>>` (then): takes two monad and returns the second monad
-- `fail`: error handling
+- **Required**: `return` takes a a value and put the value inside the container
+- **Required**: `>>=` (bind): transform a monad containing type `a` to a monad
+  containing type `b`
+- **Optional**: `>>` (then): takes two monad and returns the second monad
+- **Optional**: `fail`: error handling
 
 ## `>>`
 
