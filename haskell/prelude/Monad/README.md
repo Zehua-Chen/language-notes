@@ -16,7 +16,28 @@ class Monad m where
 - **Optional**: `>>` (then): takes two monad and returns the second monad
 - **Optional**: `fail`: error handling
 
-## `>>`
+## Examples
+
+```haskell
+module Main where
+
+data Container a = Container a
+  deriving(Show, Eq)
+
+instance Functor Container where
+  fmap f (Container v) = Container (f v)
+
+instance Applicative Container where
+  pure value = Container value
+  (Container f) <*> (Container v) = Container (f v)
+
+instance Monad Container where
+  return c = undefined
+  (Container v) >>= f = f v
+
+main = do
+  putStrLn "foo"
+```
 
 ```haskell
 main =
