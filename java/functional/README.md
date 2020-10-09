@@ -26,3 +26,10 @@ Package `java.util.function`
 - `Predicate<T>`: a `Function` that returns a boolean
 
 Lambda expression can be used to generate conforming types to these interfaces
+
+# `java.util.stream.Stream<T>`
+
+`java.util.stream.Stream<T>` represents a stream of values and is where
+functional programm in Java operates on.
+
+- All subclasses of `java.util.Collection<T>` implements this interface
