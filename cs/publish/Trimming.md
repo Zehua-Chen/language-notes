@@ -16,3 +16,16 @@ Then build using
 ```
 dotnet publish -r <rid> -c Release
 ```
+
+## Trim Mode
+
+```xml
+<PropertyGroup>
+  <PublishTrimmed>true</PublishTrimmed>
+  <TrimMode>CopyUsed</TrimMode>
+</PropertyGroup>
+```
+
+- `CopyUsed`: copy only used assemblies to the publish folder
+
+.NET 5 adds more modes
