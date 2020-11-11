@@ -27,5 +27,6 @@ dotnet publish -r <rid> -c Release
 ```
 
 - `CopyUsed`: copy only used assemblies to the publish folder
+- `Link`: only copy used symbols
 
 .NET 5 adds more modes

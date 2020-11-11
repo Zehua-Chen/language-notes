@@ -1,7 +1,8 @@
 # Path
 
 - `$(OutputPath)`: directory underwhich the project is built
-  - Ex. `bin\Release\netcoreapp3.1\`
+  - Ex. `bin\Release\netcoreapp3.1\` (when building without rid)
+  - Ex. `bin\Release\netcoreapp3.1\osx-x64\` (when building with rid)
 - `$(MSBuildProjectDirectory)`: project directory
 
 # Platform
