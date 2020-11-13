@@ -66,6 +66,12 @@ Properties configure the build process
     FOO
   </DefineConstants>
   ```
+- `<PropertyGroup></PropertyGroup>` can also be used to define custom variables
+  ```xml
+  <PropertyGroup>
+    <ZipFile>$(MSBuildProjectDirectory)\latextools-$(RuntimeIdentifier).zip</ZipFile>
+  </PropertyGroup>
+  ```
 
 # Task and Targets
 

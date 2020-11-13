@@ -25,3 +25,15 @@ Print message to std out
 ```
 
 Zip a directory
+
+## `<Delete />`
+
+```xml
+<Target Name="Zip" AfterTargets="Build">
+  <Delete Files="a.zip" />
+</Target>
+```
+
+Delete files
+
+- `Files` can be one file or a list of files separated by `;`
