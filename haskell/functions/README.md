@@ -18,3 +18,17 @@ foo :: Param -> Return
 boo :: Param -> Param -> Return
 -- implementation of boo
 ```
+
+In haskell, `->` is right associative. This make the types in the following
+groups equivalent
+
+```
+A -> B -> C -> D
+A -> B -> (C -> D)
+A -> (B -> (C -> D))
+```
+
+```
+(A -> B) -> C -> D
+(A -> B) -> (C -> D)
+```
