@@ -1,4 +1,4 @@
-# `setuptools`
+# Overview
 
 `setuptools` is a builtin package that provides utilities to configure a package
 
@@ -10,7 +10,19 @@
   - Console scripts
   - Third party tools configuration
 
-## Example
+To install a local package
+
+```
+pip install .
+```
+
+To install a local package for development
+
+```
+pip install -e .
+```
+
+# `setup.py`
 
 ```py
 import setuptools
@@ -26,6 +38,33 @@ setuptools.setup(
     "pymongo==3.11.0"
   ])
 ```
+
+# `setup.cfg`
+
+```toml
+[meta]
+name = "scrapper"
+version = "0.1.0"
+author = "zehuac2"
+author_email = "zehuac2@illinois.edu"
+url = "https://gitlab.engr.illinois.edu/zehuac2/fa20-cs242-assignment2.git"
+```
+
+By default, setup tools would find packages inside the package root. For
+example, if a package has the following layout
+
+- `./foo/`
+- `./boo/`
+
+Then installing the package would expose `foo` and `boo` package to python
+
+```python
+import foo
+import boo
+```
+
+To find packages under a subdirectory, like `src/` use the following
+configuration
 
 ```toml
 # Learned from
