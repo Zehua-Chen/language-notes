@@ -1,3 +1,8 @@
+# Control Flows
+
+- [`when`](When.md)
+- [`with`](With.md)
+
 # Shared Control Flows With Other Languages
 
 ```kotlin
