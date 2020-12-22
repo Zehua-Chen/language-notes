@@ -2,7 +2,7 @@
 
 Object initializers allows
 
-- The assignments of properties and fields during construction
+- The assignments of `set` or `init` properties and fields during construction
 - Setting indexers
 
 ```cs
@@ -10,6 +10,7 @@ class Foo
 {
   public string Foo { get; set; }
   public int Num { get; set; }
+  public int ReadOnly { get; init; }
 
   public Foo(int num)
   {

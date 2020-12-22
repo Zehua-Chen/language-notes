@@ -9,7 +9,7 @@ Provides convenient methods for `IEnumerable` implementations
 ```cs
 public string Foo(IEnumerable<string> list)
 {
-    return list.First;
+  return list.First;
 }
 ```
 
@@ -20,7 +20,7 @@ Get the first element of a collection
 ```cs
 public string Foo(IEnumerable<string> listA, IEnumerable<string> listA)
 {
-    return listA.SequenceEqual(listB);
+  return listA.SequenceEqual(listB);
 }
 ```
 

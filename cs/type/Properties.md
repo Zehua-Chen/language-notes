@@ -1,5 +1,9 @@
 # Properties
 
+- `get`: read access to property
+- `set`: write access to property
+- `init`: write access to property **only in initializer**
+
 ## `get`, `set` Are Methods
 
 - `get`, `set` blocks are considered as methods
