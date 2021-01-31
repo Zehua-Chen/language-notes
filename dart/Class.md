@@ -1,3 +1,89 @@
+# Constructor
+
+- **Except factory constructors**, constructors are special functions that does
+  not return a value
+- **Except factory constructors**, `this.property` in constructor parameter omit
+  the need for explicitly declare parameter and assign the parameter to the
+  property
+
+  ```dart
+  class Boo {
+    int value;
+
+    Boo(this.value) {
+    }
+  }
+  ```
+
+- A default constructor is auto-generated when there are no any form of custom
+  constructors
+
+## Initializer List
+
+```dart
+class Foo {
+  int x;
+  int y;
+  int z;
+
+  Foo(int x, int y): x = x, y = y, assert(z >= 0) {
+  }
+}
+```
+
+- Initializer list does not work with factory methods
+- Initializer items can be asserts
+
+## Unnamed Constructor
+
+```dart
+class Foo {
+  int value;
+
+  Foo(int value) {
+    this.value = value;
+  }
+}
+
+void main() {
+  print(Foo(17));
+}
+```
+
+## Named Constructor
+
+```dart
+class Foo {
+  Foo.empty() {
+    print('Foo.empty()');
+  }
+}
+
+void main() {
+  print(Foo.empty());
+}
+```
+
+- Named constructor does not return values
+
+## Factory Constructor
+
+```dart
+class Foo {
+  Foo() {
+  }
+
+  factory Foo.fact() {
+    return Foo();
+  }
+}
+```
+
+Use factory constructor when returning a new instance is always needed.
+
+- Factory constructors are functions with fixed return type and used as
+  constructors
+
 # Inheritance
 
 - Subclass does not have access to parent class's private members (`_` prefix)
