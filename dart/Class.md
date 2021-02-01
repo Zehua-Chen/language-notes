@@ -15,6 +15,34 @@
   }
   ```
 
+  - The body of this type of constructor can be replaced by `;`
+
+    ```dart
+    class Boo {
+      int value;
+
+      Boo(this.value);
+    }
+    ```
+
+  - Since the compiler would synthesize property initialization from the
+    parameters, the default value given in property declaration would be
+    ignored.
+
+    ```dart
+    class Boo {
+      int value = 17;
+
+      Boo({this.value});
+    }
+
+    void main() {
+      var b = Boo();
+      // output: null
+      print(b.value);
+    }
+    ```
+
 - A default constructor is auto-generated when there are no any form of custom
   constructors
 
